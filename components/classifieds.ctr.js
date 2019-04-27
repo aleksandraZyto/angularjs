@@ -30,12 +30,30 @@
                 $scope.classified.contact = contact;
                 $scope.classified = {};
                 $scope.closeSidebar();
-                $mdToast.show(
-                    $mdToast.simple()
-                    .content("New Classified saved")
-                    .hideDelay(3000)
-                    .position("top, right"));
+                showToast("Saved new Classified");
             }
+        }
+        
+        $scope.editClassified = function(classified){
+            $scope.editing = true;
+            $scope.openSidebar();
+            $scope.classified = classified;
+        }
+        
+        $scope.saveEdit = function(){
+            $scope.editing = false;
+            $scope.classified = {}
+            $scope.closeSidebar();
+            showToast("Edit saved!");
+        }
+        
+        function showToast(message){
+            $mdToast.show(
+                    $mdToast.simple()
+                    .content(message)
+                    .hideDelay(3000)
+                    .position("top, right")
+            );
         }
     });
 })();
