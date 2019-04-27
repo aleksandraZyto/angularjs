@@ -27,7 +27,8 @@
             <md-card-content>
                 <div class=classified-info>
                     <h2 class="title">{{classified.title}}</h2>
-                    <h3 class="price">{{classified.price}}</h3>
+                    <h3>{{classified.posted | date:'longDate'}}</h3>
+                    <h3 class="price">{{classified.price| currency}}</h3>
                     <p>{{classified.description}}</p>
                 </div>
             </md-card-content>
