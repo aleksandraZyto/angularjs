@@ -3,11 +3,16 @@
 <head>
     <title>ngClassifieds</title>
 </head>
-<body ng-app="ngClassifieds" ng-init="name= 'jjj' ">
+<body ng-app="ngClassifieds" ng-controller="classifiedsCtrl">
 
-    <h1>{{ name }}</h1>
+    <input type="text" placeholder="Name" ng-model=name>
+    
+    
+    <h2>{{ name.first +' blabla '+ name.last }}</h2>
+    <h2>{{ 4+9 }}</h2>
     
     <script src="node_modules/angular/angular.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="components/classifieds.ctr.js"></script>
 </body>
 </html>

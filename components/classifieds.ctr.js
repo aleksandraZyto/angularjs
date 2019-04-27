@@ -4,8 +4,12 @@
     
     angular
     .module("ngClassifieds")
-    .controller("classifieds", function($scope){
-       
-        $scope.name = "Olka";
+    .controller("classifiedsCtrl", function($scope){
+        
+        $scope.name={
+          first: "Ryan",
+            last:"Chenkie"
+        };
+    
     });
 })();
