@@ -10,6 +10,7 @@
           first: "Ryan",
             last:"Chenkie"
         };
-    
+        
+        $scope.message="Well hello there";    
     });
 })();
